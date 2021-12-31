@@ -6,6 +6,7 @@ from datetime import datetime
 def init():
     oauth_token = ft_api.get_oauth_token()
     events = ft_api.get_events(oauth_token, campus_id=29)
+    events.reverse()
     issues = gh_api.get_issues()
     for event in events:
         issue = get_or_create_issue(event, issues)
