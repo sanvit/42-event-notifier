@@ -5,7 +5,7 @@ name: Check for new events
 
 on:
   schedule:
-    - cron: '0/2 * * * *'
+    - cron: '*/2 * * * *'
   workflow_dispatch:
 
 jobs:
