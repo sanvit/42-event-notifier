@@ -22,7 +22,7 @@ def get_or_create_issue(event, issues):
         if issue['title'].startswith(f"[{event['id']}]"):
             return issue
     issue = gh_api.post_issue(
-        f"[{event['id']}] {event['name']}", event['description'])
+        f"[{event['id']}] {event['name']}", event['description'], labels=['event'])
     return issue
 
 
